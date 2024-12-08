@@ -2,41 +2,59 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="プレジャーボート,PB,ボート保険,船,保険金額,プレジャーボート保険,遊漁船">
     <meta name="description" content="レジャーや遊漁等に使うプレジャーボートの保険料が簡単に計算できるサイトです。船の情報や保険内容（金額等）を入力するだけですぐに保険料が算出されます。">
     <title>プレジャーボート保険料計算</title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106871737-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-106871737-1');
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <header>
     <div class="container">
         <h1>プレジャーボート保険料計算</h1>
-        <img class="header_img" src="img/header.png" alt="プレジャーボート保険料計算のヘッダー画像">
+        <img class="header_img" src="img/header.png" alt="プレジャーボート保険" width="80%">
     </div>
 </header>
 <main>
     <div class="container">
-        <p class="explain"><strong>当サイトでは「プレジャーボートの保険料って大体何円くらい？」</strong>そんな疑問をすぐに解決いたします。</p>
-        <p class="explain">船の情報や保険金額を入力して頂くだけで<strong>「日本漁船保険組合のプレジャーボート保険」</strong>におけるプレジャーボート・ヨットの保険料を算出することができます。</p>
-        <section class="main_area1">
-            <a class="btn1" href="boat.php">プレジャーボートの保険料計算はこちら</a>
-        </section>
-        <section class="main_area2">
-            <a class="btn2" href="yacht.php">プレジャーヨットの保険料計算はこちら</a>
-        </section>
+        <p class="explain">
+            <strong>当サイトでは「プレジャーボートの保険料って大体何円くらい？」</strong>そんな疑問をすぐに解決いたします。
+        </p>
+        <p class="explain">
+            <span style="border-bottom: 1px solid black;">船の情報</span>や
+            <span style="border-bottom: 1px solid black;">保険金額</span>を入力して頂くだけで
+            <strong>「日本漁船保険組合のプレジャーボート保険」</strong>における
+            プレジャーボート・ヨットの保険料を算出することができます。
+        </p>
+        <p style="margin-top: 10px;">--簡単に計算できます--</p>
+
+        <!-- ボタンエリア -->
+        <div class="main_area1">
+            <a class="btn1" href="boat.php">プレジャーボートの保険料計算は<br>こちら</a>
+        </div>
+        <div class="main_area2">
+            <a class="btn2" href="yacht.php">プレジャーヨットの保険料計算は<br>こちら</a>
+        </div>
+
+        <!-- 保険の説明 -->
+        <h2 style="margin: 30px 0 20px 0; padding-top: 10px;">プレジャーボート保険の種類</h2>
+        <ul class="list0">
+            <li><a href="pb_sekinin.php">ＰＢ責任保険</a></li>
+            <li><a href="pb_wide.php">ＰＢ責任保険ワイド</a></li>
+            <li><a href="pb_toujousha.php">ＰＢ搭乗者傷害保険</a></li>
+            <li><a href="pb_joukyaku.php">ＰＢ乗客賠償責任保険</a></li>
+        </ul>
+        <p>プレジャーボート保険の入り方を簡単に説明します</p>
+        <a class="btn1" href="hoken_hairikata.php">かなり砕けた説明は<br>こちら</a>
     </div>
 </main>
 <footer>
-    <small>Copyright 2017-2018, プレジャーボート保険</small>
+    <small>Copyright 2017-<span id="current-year"></span>, プレジャーボート保険</small>
 </footer>
+<script>
+    // 現在の年を取得して表示
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
