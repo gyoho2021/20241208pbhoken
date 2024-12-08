@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="プレジャーボート,PB,ボート保険,船,保険金額,プレジャーボート保険,遊漁船">
-    <meta name="description" content="レジャーや遊漁等に使うプレジャーボートの保険料が簡単に計算できるサイトです。船の情報や保険内容（金額等）を入力するだけですぐに保険料が算出されます。">
+    <meta name="description" content="プレジャーボートの保険料計算サイト">
+    <meta name="keywords" content="プレジャーボート,保険,計算,保険料">
     <title>プレジャーボート保険料計算</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
     <div class="container">
         <h1>プレジャーボート保険料計算</h1>
-        <img class="header_img" src="img/header.png" width="80%" alt="Header Image">
+        <img class="header_img" src="img/header.png" alt="プレジャーボート保険" width="80%">
     </div>
 </header>
 <main>
@@ -23,29 +25,34 @@
         </p>
         <p class="explain">
             <span style="border-bottom: 1px solid black;">船の情報</span>や
-            <span style="border-bottom: 1px solid black;">保険金額</span>を入力して頂くだけで
-            <strong>「日本漁船保険組合のプレジャーボート保険」</strong>
-            におけるプレジャーボート・ヨットの保険料を算出することができます。
+            <span style="border-bottom: 1px solid black;">保険金額</span>
+            を入力して頂くだけで<strong>日本漁船保険組合のプレジャーボート保険</strong>における
+            プレジャーボート・ヨットの保険料を算出することができます。
         </p>
-        <div class="main_area1">
-            <a class="btn1" href="boat.php">プレジャーボートの保険料計算は<br>こちら</a>
-        </div>
-        <div class="main_area2">
-            <a class="btn2" href="yacht.php">プレジャーヨットの保険料計算は<br>こちら</a>
+        <div class="main_area">
+            <a class="btn1" href="boat.php">
+                <i class="fa fa-ship"></i> プレジャーボートの保険料計算はこちら
+            </a>
+            <a class="btn2" href="yacht.php">
+                <i class="fa fa-anchor"></i> プレジャーヨットの保険料計算はこちら
+            </a>
         </div>
         <h2>プレジャーボート保険の種類</h2>
         <ul class="list0">
-            <li><a href="pb_sekinin.php">ＰＢ責任保険</a></li>
-            <li><a href="pb_wide.php">ＰＢ責任保険ワイド</a></li>
-            <li><a href="pb_toujousha.php">ＰＢ搭乗者傷害保険</a></li>
-            <li><a href="pb_joukyaku.php">ＰＢ乗客賠償責任保険</a></li>
+            <li><a href="pb_sekinin.php"><i class="fa fa-shield"></i> ＰＢ責任保険</a></li>
+            <li><a href="pb_wide.php"><i class="fa fa-plus-square"></i> ＰＢ責任保険ワイド</a></li>
+            <li><a href="pb_toujousha.php"><i class="fa fa-user"></i> ＰＢ搭乗者傷害保険</a></li>
+            <li><a href="pb_joukyaku.php"><i class="fa fa-users"></i> ＰＢ乗客賠償責任保険</a></li>
         </ul>
         <p>プレジャーボート保険の入り方を簡単に説明します</p>
-        <a class="btn3" href="hoken_hairikata.php">かなり砕けた説明は<br>こちら</a>
+        <a class="btn3" href="hoken_hairikata.php">
+            <i class="fa fa-info-circle"></i> 詳細はこちら
+        </a>
     </div>
 </main>
 <footer>
-    <small>Copyright 2017-
+    <small>
+        Copyright 2017-
         <script>
             document.write(new Date().getFullYear());
         </script>
