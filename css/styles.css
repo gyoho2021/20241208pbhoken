@@ -1,254 +1,131 @@
+/* 文字コード指定 */
 @charset 'UTF-8';
 
+/* 全体のリセット */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* ベーススタイル */
 body {
-    background: lightblue;
+    background-color: #add8e6; /* Light Blue */
     font-family: Arial, sans-serif;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-        
-}
-
-body > .container {
-    height: auto;
+    color: #333; /* Text Color */
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-header {
-}
-
-main {
-}
-
-footer {
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 10px;
-    border-top: 2px solid gray;
-}
-
+/* レスポンシブ対応用コンテナ */
 .container {
-    min-height: 100%;
-    height: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding:10px;
-    text-align: center;
-    font-size: 16px;
+    padding: 10px;
     width: 90%;
-    max-width: 840px;
+    text-align: center;
 }
 
+/* ヘッダー */
+header {
+    background-color: #f0f8ff; /* Alice Blue */
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 見出し */
 h1 {
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    border-top: 2px solid gray;
     font-size: 20px;
-    margin-top: 20px;
+    margin: 20px 0 10px;
+    border-top: 2px solid #ccc;
     padding-top: 10px;
 }
 
 h3 {
-    border-top: 1px dotted gray;
-    margin-top: 10px;
-    padding-top: 10px;
-}
-
-.h3_explain {
-    border-top: none;
-    border-bottom: 2px dotted gray;
-    border-left: 5px solid gray;
-    margin-bottom: 30px;
-    text-align: left;
-    padding-left: 30px;
-    padding-bottom: 5px;
-}
-
-.btn1 {
-    margin: 10px;
-    padding: 5px;
-    border : 1px solid gray;
-    background: #fcfcfc;
-    display: inline-block;
-    box-shadow: 0px 3px gray;
-}
-.btn2 {
-    margin: 10px;
-    padding: 5px;
-    border : 1px solid gray;
-    background: #fcfcfc;
-    display: inline-block;
-    box-shadow: 0px 3px gray;
-}
-.btn3 {
-    margin: 10px;
-    padding: 5px;
-    border : 1px solid gray;
-    background: #fcfcfc;
-    display: inline-block;
-    box-shadow: 0px 3px gray;
-}
-
-.btn3:hover {
-    opacity: 0.5;
-}
-
-.btn3:active {
-    position: relative;
-    box-shadow: none;
-    top: 2px;
-}
-
-.btn1:hover {
-    opacity: 0.5;
-}
-
-.btn1:active {
-    position: relative;
-    box-shadow: none;
-    top: 2px;  
-}
-.btn2:hover {
-    opacity: 0.5;
-}
-
-.btn2:active {
-    position: relative;
-    box-shadow: none;
-    top: 2px;  
-}
-
-.main_area1 {
-    text-align: center;
-    margin: 0 auto;
-    width: 60%;
-}
-.main_area2 {
-    text-align: center;
-    margin: 0 auto;
-    width: 60%;
-}
-
-div.hune_jouhou {
-    border: 2px solid blue;
-    padding: 10px 20px 0;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-div.hokenryou {
-    margin: 0 auto;
-    width: 250px;
-    text-align: right;
-    padding-right: 20px;
-}
-div.hokenryou_center {
-    margin: 0 auto;
-    text-align: center;
-}
-
-/*リストデザイン0*/
-ul.list0 , ol {
-    background: #fcfcfc;/*背景色*/
-    padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
-    border: solid 3px gray;/*線の種類 太さ 色*/
-    width: 200px;
-    margin: 20px auto;
-    list-style: none;
-    text-align: center;
-    font-size: 0px;
-}
-
-ul.list0 li, ol.list0 li {
-    line-height: 1.5; /*文の行高*/
-    padding: 0.5em 0; /*前後の文との余白*/
-    font-size: 16px;
-}
-
-/*リストデザイン1*/
-ul.list1 {
-    padding: 0;
-    width: 70%;
-    margin: 20px auto;
-}
-
-ul.list1 li, ol.list1 li {
-    color: #404040;
-    border-left: solid 6px #1fa67a;/*左側の線*/
-    border-bottom: solid 2px #dadada;/*下に灰色線*/
-    background: whitesmoke;
-    margin-bottom: 5px;/*下のバーとの余白*/
-    line-height: 1.5;
-    padding: 0.5em;
-    list-style-type: none!important;/*ポチ消す*/
-    font-weight: bold;
-    text-align: left;
-    }
-
-/*リストデザイン2*/
-ul.list2 {
-    margin-bottom: 15px;
-    padding: 0;
-    text-align: center;
-    width: 170px;
-}
-
-ul.list2 li {
-    color: black;
-    position:relative;
-    background: #f1f8ff;/*バーの色*/
-    line-height: 1;
-    padding: 0.5em;
-    margin-bottom: 4px;
-    border-left : solid 35px #5c9ee7;/*先の色＝アイコン裏の色*/
-    list-style-type: none!important;
+    font-size: 18px;
     margin-top: 10px;
 }
 
-ul.list2 li:before {
-    font-family: FontAwesome;
-    content: "\f040";
-    position: absolute;
-    display: block;
-    padding: 0.5em;
-    width: 1.2em;
-    color: white; /*アイコン色*/
-    font-weight: normal;/*アイコンは太字にしない*/
-    text-align: center;
-    left : -35px; /*左端からのアイコンまでの距離*/
-    /*以下 上下中央寄せのため*/
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-/*font-awesomeアイコン*/
-.fa {
-    margin-right: 10px;
-}
-
-/*例えば*/
-.example {
-    color: red;
-    padding-top: 15px;
-}
-
-/*説明*/
+/* 説明文 */
 .explain {
     text-align: left;
-    width: 90%;
-    margin: 0px auto 15px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ボタンスタイル */
+.btn1, .btn2, .btn3 {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Blue */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #0056b3;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px #004085;
+    transform: translateY(-2px);
+}
+
+.btn1:active, .btn2:active, .btn3:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 #004085;
+}
+
+/* メインエリア */
+.main_area1, .main_area2 {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* フッター */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: #f0f8ff;
+    border-top: 2px solid #ccc;
+    text-align: center;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .btn1, .btn2, .btn3 {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
