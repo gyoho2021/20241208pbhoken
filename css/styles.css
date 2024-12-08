@@ -1,65 +1,99 @@
-/* Font Awesome アイコン付きボタンのスタイル */
-.btn1, .btn2, .btn3 {
-    margin: 10px;
-    padding: 10px 20px;
-    border: 1px solid gray;
-    background: #fcfcfc;
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: lightblue;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 840px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.header_img {
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.explain {
+    margin: 15px 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.btn1, .btn2 {
     display: inline-block;
-    box-shadow: 0px 3px gray;
+    padding: 10px 15px;
+    margin: 15px 5px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    color: #333;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
     border-radius: 5px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
-.btn1 i, .btn2 i, .btn3 i {
-    margin-right: 8px;
-    color: #007BFF;
+.btn1:hover, .btn2:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.btn1:hover, .btn2:hover, .btn3:hover {
-    opacity: 0.8;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-}
-
-.btn1:active, .btn2:active, .btn3:active {
-    position: relative;
-    box-shadow: none;
-    top: 2px;
-}
-
-/* プレジャーボート保険の種類リスト */
-ul.list0 {
-    margin: 20px auto;
-    padding: 0;
+.list0 {
     list-style: none;
-    text-align: left;
-    width: 90%;
-    max-width: 600px;
+    padding: 0;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid gray;
+    background-color: #fcfcfc;
+    max-width: 300px;
 }
 
-ul.list0 li {
-    margin: 10px 0;
+.list0 li {
     padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-left: 5px solid #007BFF;
-    border-radius: 5px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
+    border-bottom: 1px dotted gray;
 }
 
-ul.list0 li a {
+.list0 li:last-child {
+    border-bottom: none;
+}
+
+.list0 li a {
     text-decoration: none;
-    color: #333;
-    width: 100%;
+    font-weight: bold;
+    color: #007BFF;
 }
 
-ul.list0 li a:hover {
-    color: #007BFF;
+.list0 li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 2px solid gray;
 }
