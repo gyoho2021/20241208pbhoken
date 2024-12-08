@@ -1,8 +1,17 @@
-# ベースイメージとして公式PHPイメージを使用
-FROM php:8.1-cli
+# ベースイメージとしてPHPを使用
+FROM php:7.4-apache
 
-# 必要なポートを開放
-EXPOSE 10000
+# 作業ディレクトリを設定
+WORKDIR /var/www/html
 
-# PHPビルトインサーバーを起動するコマンドを指定
-CMD ["php", "-S", "0.0.0.0:10000", "-t", "."]
+# ファイルをコンテナ内にコピー
+COPY . .
+
+# 必要な拡張機能をインストール（必要に応じて追加可能）
+RUN docker-php-ext-install mysqli
+
+# ポートを設定
+EXPOSE 80
+
+# Apacheを起動
+CMD ["apache2-foreground"]
